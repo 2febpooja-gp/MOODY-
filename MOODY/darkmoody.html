@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Moody</title>
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" href="darkmoody.css">
+
+   
+</head>
+
+<body>
+
+    <div class="top-bar"></div>
+
+    <div class="header-section" 
+    id="headerSection">
+
+    <h1>Moody 🙂</h1>
+
+    <div id="settingsBtn" 
+    class="settings-btn">
+        ⚙️
+    </div>
+
+    <div class="search-box">
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="search your mood">
+
+</div>
+    </div>
+
+
+    
+
+    <div id="feed">
+
+  </div>
+
+  <div id="profilePage" style="display: none;">
+
+   
+
+    <div class="profile-header">
+
+         
+
+
+        <div class="profile-pic">
+            <img id="profileImage"
+
+            src="profile-icon.png">
+        </div>
+
+          <div id="profileMenu" class="profile-menu">
+
+        <div id="editPic">
+            Edit
+        </div>
+
+        <div id="removePic">
+            Remove
+        </div>
+    </div>
+        
+
+        <h2 id="profileName"></h2>
+    </div>
+
+    <input
+    type="file"
+    id="profileUpload"
+    accept="image/*"
+    style="display: none;">
+
+    <p>Total Posts: <span id="postCount">0</
+        span></p>
+
+        <div class="profile-card" id="myPostsCard">
+            <div class="sphere"></div>
+            <div class="card-icon">🗒</div>
+            <h3>My Posts</h3>
+            <p id="myPostsCount">0 Posts</p>
+        </div>
+
+        <div id="myPosts" style="display:none;"></div>
+
+
+  </div>
+
+
+      <div class="bottom-nav">
+        <div id="homeBtn">
+            <img src="home.png"
+            class="nav-icon">
+        </div>
+
+        <div id="messengerBtn">
+            <img src="messenger.png"
+            class="nav-icon">
+        </div>
+        <div id="addMood">
+            <img src="post.png"
+            class="nav-icon">
+        </div>
+        <div id="profileBtn">
+            <img src="profile.png"
+            class="nav-icon">
+        </div>
+    </div>
+
+    <div id="moodPopup" class="popup">
+        <div class="popup-content">
+            <h2>Share Your Mood</h2>
+            <span id="closePopup">✖️</span>
+
+            <div id="photoBox">
+                📷 Add Photo
+            </div>
+
+            <input type="file" id="photoInput" 
+            accept="image/*" hidden>
+
+            
+
+            <input id="emojiInput" type="text"
+            placeholder="Emoji 😎">
+
+            <input id="moodInput" type="text"
+            placeholder="Mood">
+
+            
+
+            <textarea id="captionInput"
+            placeholder="share your story"></textarea>
+
+            <button id="postBtn" type="button">Post Mood
+
+            </button>
+
+            </div>
+
+       </div>
+
+       <div id="menuPopup" class="menu-popup">
+
+        <div class="menu-item" id="editPostBtn">
+            Edit Post
+        </div>
+
+        <div class="menu-item" id="deletePostBtn">
+            Delete Post
+        </div>
+
+       </div>
+
+       <div id="deletePopup" class="popup">
+
+        <div class="popup-content">
+            <h3>Delete Post?</h3>
+
+            <p>
+                Are you sure you wanna delete this post?
+            </p>
+
+            <button id="cancelDelete">
+                Cancel
+            </button>
+
+            <button id="confirmDelete">
+                Delete
+            </button>
+
+        </div>
+
+       </div>
+
+
+       <div id="settingsPanel"
+       class="settings-panel">
+
+       <div class="settings-handle"></div>
+    
+    <h3>Settings</h3>
+
+<div class="setting-item"
+id="darkThemeBtn">🌙 Dark Theme</div>
+
+<div class="setting-item"> 🌻 Light Theme</div>
+
+<div class="setting-item"
+id="editProfileBtn">
+Edit Profile
+</div>
+
+<div class="setting-item"> Notifications</div>
+
+<div class="setting-item"> Updates</div>
+
+<div class="setting-item"> About</div>
+
+<div class="setting-item"> Privacy</div>
+
+       </div>
+
+
+       <div id="commentsPanel"
+       class="comments-panel">
+
+       <div class="drag-bar"></div>
+    
+    <h3>Comments</h3>
+
+    <div id="commentsList"></div>
+
+    <div class="comment-input-box">
+
+        <input
+        type="text"
+        id="commentInput"
+        placeholder="Write a comment...">
+
+        <button id="commentPostBtn">
+            Post
+        </button>
+
+    </div>
+    </div>
+    
+
+
+
+
+
+       <div id="previewPopup" class="popup">
+
+        <div class="popup-content">
+
+            <h3>Preview Profile Photo</h3>
+
+            <img id="previewImage">
+            
+
+            <button id="updateProfilePic">
+                Update
+            </button>
+
+            <button id="cancelProfilePic">
+                Cancel
+            </button>
+        </div>
+       </div>
+
+       <script
+       src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+       <script src="darkmoody.js"></script>
+
+</body>
+
+</html>

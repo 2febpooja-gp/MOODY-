@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Chat</title>
+
+    <link rel="stylesheet"
+    href="chat.css">
+
+</head>
+
+<body>
+
+    <div id="chatPage">
+
+        <div class="chat-header">
+
+            <button id="backBtn">→</button>
+
+            <div class="chat-user">
+
+                <img src="defaultprofile.png"
+                class="chat-pfp">
+
+                <div>
+
+                    <h3 id="chatUsername">Username</h3>
+
+                    <p id="chatStatus">Offline</p>
+
+                </div>
+            </div>
+
+            <div id="messagesContainer">
+
+            </div>
+
+            <div class="message-input">
+
+                <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message...">
+
+                <button id="sendBtn"
+                onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="chat.js"></script>
+
+</body>
+
+</html>
